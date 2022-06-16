@@ -1,0 +1,90 @@
+.balance {
+	padding: 4rem 1rem;
+	width: 100%;
+	max-width: 400px;
+	height: 100vh;
+	// flex-direction: column;
+	&__cont {
+		background-color: $softRed;
+		border-radius: 10px;
+		margin: 0 0 1.25rem;
+	}
+	&__inner {
+		padding: 1.375rem 1.5rem;
+	}
+	&__left {
+		width: 50%;
+	}
+	&__text {
+		margin: 0 0 0.25rem;
+		font-size: 0.875rem;
+		color: $veryPaleOrange;
+		font-weight: 400;
+	}
+	&__sum {
+		margin: 0;
+		color: $veryPaleOrange;
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+	&__right {
+		width: 50%;
+	}
+	&__img {
+		width: 60px;
+	}
+
+	// CHART WINDOW
+	&__chartCont {
+		background-color: $veryPaleOrange;
+		height: 400px;
+		border-radius: 10px;
+	}
+	&__chartInner {
+		padding: 1.375rem 1.5rem;
+		flex-direction: column;
+		height: 400px;
+	}
+	&__chartHeader {
+		color: $darkBrown;
+		margin: 0;
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+	&__chartDiagram {
+		width: 100%;
+		height: 200px;
+		background-color: aliceblue;
+	}
+	&__divider {
+		// margin: 0.5rem 0;
+		width: 100%;
+		height: 2px;
+		background-color: $cream;
+		border-radius: 10px;
+	}
+	&__chartPerc {
+		margin: 0;
+      text-align: end;
+      font-weight: 700;
+	}
+	&__chartText {
+      margin: 0;
+      text-align: end;
+      font-weight: 400;
+      font-size: 0.875rem;
+	}
+}
+.flex-align-bottom {
+   justify-content: space-between;
+	align-items: flex-end;
+}
+.brown:last-child {
+	color: $darkBrown;
+   font-weight: 700;
+   font-size: 1.75rem;
+}
+.lightBrown {
+	color: $mediumBrown;
+   font-weight: 400;
+}

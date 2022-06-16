@@ -14,30 +14,32 @@
 
 		<title>Frontend Mentor | Expenses chart component</title>
 	</head>
-	<body>
-		<main>
-			<div class="balanceCont">
-				<div class="balanceInner">
-					<div class="balanceLeft">
-						<h1 class="balanceText">My balance</h1>
-						<p class="balanceSum">$921.48</p>
+	<body class="flex flex-jc-c flex-ai-c">
+		<main class="balance">
+			<div class="balance__cont">
+				<div class="balance__inner flex">
+					<div class="balance__left">
+						<h1 class="balance__text">My balance</h1>
+						<p class="balance__sum">$921.48</p>
 					</div>
-					<div class="balanceRight"><img src="" alt="" /></div>
+					<div class="balance__right flex flex-jc-r flex-ai-c"><img class="balance__img" src="images/logo.svg" alt="" /></div>
 				</div>
 			</div>
-			<div class="chartCont">
-				<div class="chartInner">
-					<p class="chartHeader">Spending - Last 7 days</p>
-					<div class="chartDiagram"></div>
-					<div class="divider"></div>
-					<div class="chartLeft">
-						<h1 class="chartText">Total this month</h1>
-						<p class="chartSum">$478.33</p>
-					</div>
-					<div class="chartRight">
-						<p class="chartPerc">+2.4%</p>
-						<p class="chartText">from last month</p>
-					</div>
+			<div class="balance__chartCont">
+				<div class="balance__chartInner flex flex-jc-sb">
+					<p class="balance__chartHeader">Spending - Last 7 days</p>
+					<div class="balance__chartDiagram"></div>
+					<div class="balance__divider"></div>
+               <div class="flex flex-align-bottom">
+                  <div class="balance__left">
+                     <h1 class="balance__text lightBrown">Total this month</h1>
+                     <p class="balance__sum brown">$478.33</p>
+                  </div>
+                  <div class="balance__chartRight">
+                     <p class="balance__chartPerc brown">+2.4%</p>
+                     <p class="balance__chartText lightBrown">from last month</p>
+                  </div>
+               </div>
 				</div>
 			</div>
 		</main>
