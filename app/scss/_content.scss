@@ -54,7 +54,7 @@
 	&__chartDiagram {
 		width: 100%;
 		height: 200px;
-		background-color: aliceblue;
+		// background-color: aliceblue;
 	}
 	&__divider {
 		// margin: 0.5rem 0;
@@ -87,4 +87,7 @@
 .lightBrown {
 	color: $mediumBrown;
    font-weight: 400;
+}
+#myChart{
+   height: 100% !important;
 }
