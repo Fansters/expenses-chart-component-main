@@ -16,11 +16,11 @@ Your users should be able to:
 
 ### Screenshot
 
-![](https://github.com/Fansters/advice-generator-app-main/blob/master/images/projectApiGen.jpg)
+![](https://github.com/Fansters/expenses-chart-component-main/blob/master/images/expense-chart.png)
 
 ### Links
 
-- Solution URL: [Project](https://heroic-truffle-571ff0.netlify.app/)
+- Solution URL: [Project](https://storied-yeot-059108.netlify.app/)
 
 ### Built with
 
