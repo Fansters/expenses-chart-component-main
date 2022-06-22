@@ -1,10 +1,33 @@
+'use strict';
+
+async function fetchData() {
+   const url = '../../data.json'
+   const response = await fetch(url)
+   const dataPoints = await response.json();
+   // console.log(dataPoints);
+   return dataPoints;
+}
+
+fetchData().then(dataP => {
+   const day = dataP.map(function (i) {
+      return i.day;
+   })
+   console.log(day);
+   const amount = dataP.map(function (i) {
+      return i.amount;
+   })
+   // console.log(amount);
+   myChart.data.labels = day;
+   myChart.data.datasets[0].data = amount;
+   myChart.update();
+});
 
 const data = {
-   labels: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+   labels: ["mon", "tue", "wed", "thu", "fi", "sat", "sun"],
    datasets: [
       {
          label: "",
-         data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
+         data: [17.45, 34.91, 52.36, 3.07, 23.39, 43.28, 25.48],
          backgroundColor: [
             "rgb(236, 119, 95)",
             "rgb(236, 119, 95)",
@@ -62,7 +85,7 @@ const myChart = new Chart(ctx, {
       },
       scales: {
          x: {
-            height:60,
+            height: 60,
             ticks: {
                color: "hsl(28, 10%, 53%)",
             },
