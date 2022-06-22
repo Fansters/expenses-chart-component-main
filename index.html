@@ -19,7 +19,7 @@
 			<div class="balance__cont">
 				<div class="balance__inner flex">
 					<div class="balance__left">
-						<h1 class="balance__text">My balance</h1>
+						<p class="balance__text">My balance</p>
 						<p class="balance__sum">$921.48</p>
 					</div>
 					<div class="balance__right flex flex-jc-r flex-ai-c">
@@ -28,15 +28,15 @@
 				</div>
 			</div>
 			<div class="balance__chartCont">
-				<div class="balance__chartInner flex flex-jc-sa">
-					<p class="balance__chartHeader">Spending - Last 7 days</p>
-					<div class="balance__chartDiagram">
+				<div class="balance__chartInner flex flex-jc-sb">
+					<h1 class="balance__chartHeader">Spending - Last 7 days</h1>
+					<div class="balance__chartDiagram flex flex-ai-c">
 						<canvas id="myChart"></canvas>
 					</div>
 					<div class="balance__divider"></div>
 					<div class="flex flex-align-bottom">
-						<div class="balance__left">
-							<h1 class="balance__text lightBrown">Total this month</h1>
+						<div class="balance__chartLeft">
+							<p class="balance__text lightBrown spaceDesktop">Total this month</p>
 							<p class="balance__sum brown">$478.33</p>
 						</div>
 						<div class="balance__chartRight">
@@ -54,86 +54,6 @@
 			referrerpolicy="no-referrer"
 		></script>
 		<script src="./node_modules/chart.js/dist/chart.min.js"></script>
-		<script async>
-			const data = {
-				labels: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
-				datasets: [
-					{
-						label: "",
-						data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
-						backgroundColor: [
-							"rgb(236, 119, 95)",
-							"rgb(236, 119, 95)",
-							"rgb(236, 119, 95)",
-							"rgb(236, 119, 95)",
-							"rgb(236, 119, 95)",
-							"rgb(236, 119, 95)",
-							"rgb(236, 119, 95)",
-						],
-						borderWidth: 0,
-						borderRadius: 3,
-						borderSkipped: false,
-						// barPercentage: 0.5,
-						// barThickness: 6,
-						// maxBarThickness: 8,
-						// minBarLength: 2,
-						// data: [10, 20, 30, 40, 50, 60, 70],
-						hoverBackgroundColor: "hsl(186, 34%, 60%)",
-					},
-				],
-			};
-			const ctx = document.getElementById("myChart");
-			const myChart = new Chart(ctx, {
-				type: "bar",
-				data: data,
-				options: {
-					responsive: true,
-					// interaction: {
-					// 	mode: "index",
-					// 	axis: "y",
-					// },
-					plugins: {
-						tooltip: {
-							// enabled:false,
-							backgroundColor: "hsl(25, 47%, 15%)",
-							position: "nearest",
-							title: false,
-							callbacks: {
-								labelColor: function () {
-									return {
-										borderColor: "hsl(25, 47%, 15%)",
-										backgroundColor: "hsl(25, 47%, 15%)",
-									};
-								},
-								title: function () {},
-							},
-						},
-						chartAreaBorder: {
-							borderWidth: 6,
-						},
-						legend: {
-							display: false,
-						},
-					},
-					scales: {
-						x: {
-							ticks: {
-								color: "hsl(28, 10%, 53%)",
-							},
-							gridLine: {
-								display: false,
-							},
-							grid: {
-								drawBorder: false,
-								display: false,
-							},
-						},
-						y: {
-							display: false,
-						},
-					},
-				},
-			});
-		</script>
+		<script src="app/js/script.js" async></script>
 	</body>
 </html>

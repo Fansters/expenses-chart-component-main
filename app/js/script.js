@@ -1,41 +1,82 @@
 
-require(['./node_modules/chart.js/dist/chart.min.js'], function(Chart){
-   const ctx = document.getElementById('myChart');
-   const myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-          datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
-              backgroundColor: [
-                  'rgba(255, 99, 132, 0.2)',
-                  'rgba(54, 162, 235, 0.2)',
-                  'rgba(255, 206, 86, 0.2)',
-                  'rgba(75, 192, 192, 0.2)',
-                  'rgba(153, 102, 255, 0.2)',
-                  'rgba(255, 159, 64, 0.2)'
-              ],
-              borderColor: [
-                  'rgba(255, 99, 132, 1)',
-                  'rgba(54, 162, 235, 1)',
-                  'rgba(255, 206, 86, 1)',
-                  'rgba(75, 192, 192, 1)',
-                  'rgba(153, 102, 255, 1)',
-                  'rgba(255, 159, 64, 1)'
-              ],
-              borderWidth: 1
-          }]
+const data = {
+   labels: ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+   datasets: [
+      {
+         label: "",
+         data: [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
+         backgroundColor: [
+            "rgb(236, 119, 95)",
+            "rgb(236, 119, 95)",
+            "rgb(236, 119, 95)",
+            "rgb(236, 119, 95)",
+            "rgb(236, 119, 95)",
+            "rgb(236, 119, 95)",
+            "rgb(236, 119, 95)",
+         ],
+         borderWidth: 0,
+         borderRadius: 3,
+         borderSkipped: false,
+         // barPercentage: 0.5,
+         // barThickness: 6,
+         // maxBarThickness: 8,
+         // minBarLength: 2,
+         // data: [10, 20, 30, 40, 50, 60, 70],
+         hoverBackgroundColor: "hsl(186, 34%, 60%)",
       },
-      options: {
-          scales: {
-              y: {
-                  beginAtZero: true
-              }
-          }
-      }
-  });
+   ],
+};
+const ctx = document.getElementById("myChart");
+const myChart = new Chart(ctx, {
+   type: "bar",
+   data: data,
+   options: {
+      maintainAspectRatio: false,
+      responsive: true,
+      // interaction: {
+      // 	mode: "index",
+      // 	axis: "y",
+      // },
+      plugins: {
+         tooltip: {
+            // enabled:false,
+            backgroundColor: "hsl(25, 47%, 15%)",
+            position: "nearest",
+            title: false,
+            callbacks: {
+               labelColor: function () {
+                  return {
+                     borderColor: "hsl(25, 47%, 15%)",
+                     backgroundColor: "hsl(25, 47%, 15%)",
+                  };
+               },
+               title: function () { },
+            },
+         },
+         chartAreaBorder: {
+            borderWidth: 6,
+         },
+         legend: {
+            display: false,
+         },
+      },
+      scales: {
+         x: {
+            height:60,
+            ticks: {
+               color: "hsl(28, 10%, 53%)",
+            },
+            gridLine: {
+               display: false,
+            },
+            grid: {
+               drawBorder: false,
+               display: false,
+            },
+         },
+         y: {
+            display: false,
+         },
+      },
+   },
 });
-
-
-

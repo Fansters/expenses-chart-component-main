@@ -1,14 +1,13 @@
 .balance {
-  padding: 4rem .875rem;
+  padding: 0rem 0.9rem;
   width: 100%;
   max-width: 400px;
-  height: 100vh;
 }
 
 .balance__cont {
   background-color: #ec775f;
   border-radius: 10px;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem;
 }
 
 .balance__inner {
@@ -43,12 +42,12 @@
 
 .balance__chartCont {
   background-color: #fffaf5;
-  height: 400px;
+  height: 420px;
   border-radius: 10px;
 }
 
 .balance__chartInner {
-  padding: 1.375rem 1.050rem;
+  padding: 1.5rem 1.05rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -65,13 +64,30 @@
 
 .balance__chartDiagram {
   width: 100%;
+  height: 60%;
+  padding: 10px 0;
 }
 
 .balance__divider {
   width: 100%;
   height: 2px;
+  margin: 0px 0 15px;
   background-color: #f8e9dd;
   border-radius: 10px;
+}
+
+.balance__chartRight {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.balance__chartLeft {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .balance__chartPerc {
@@ -91,9 +107,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .brown:last-child {
@@ -103,9 +119,79 @@
 }
 
 .lightBrown {
-  padding-top: 10px;
   color: #93867b;
   font-weight: 400;
+}
+
+@media screen and (min-width: 600px) {
+  .balance {
+    max-width: 375px;
+  }
+  .balance__cont {
+    border-radius: 14px;
+  }
+  .balance__inner {
+    padding: 1rem 1.5rem;
+  }
+  .balance__text {
+    margin: 0 0 0.25rem 0;
+    font-size: 0.675rem;
+  }
+  .balance__sum {
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  .balance__img {
+    width: 50px;
+  }
+  .balance__btn {
+    cursor: pointer;
+    width: 65px;
+    height: 65px;
+  }
+  .balance__btn button {
+    cursor: pointer;
+  }
+  .balance__chartCont {
+    height: 350px;
+  }
+  .balance__chartInner {
+    padding: 1.4rem 1.5rem;
+  }
+  .balance__chartDiagram {
+    width: 100%;
+  }
+  .balance .spaceDesktop {
+    margin: 0;
+  }
+  .balance .brown:last-child {
+    font-size: 2rem;
+  }
+  .balance__chartLeft {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    height: 100%;
+  }
+  .balance__chartRight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    height: 100%;
+    padding: 0 0 10px 0;
+  }
+  .balance__chartPerc {
+    font-size: .75rem;
+  }
+  .balance .lightBrown {
+    font-size: 0.675rem;
+  }
 }
 
 html {
@@ -124,6 +210,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "DM Sans", sans-serif;
+  height: 100vh;
 }
 
 .flex {
